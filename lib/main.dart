@@ -28,6 +28,13 @@ class MyHome extends StatelessWidget {
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
+          actions: [
+            Icon(Icons.search),
+            Icon(Icons.add),
+            IconButton(onPressed: () {
+              print("Click More");
+            }, icon: Icon(Icons.more_vert))
+          ],
           leading: Icon(Icons.man_2_outlined),
           backgroundColor: Colors.blue,
           title: const Text('Ryverse'),
