@@ -12,14 +12,7 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       title: 'hello brook',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Judul Halaman'),
-        ),
-        body: const Center(
-          child: Text('Halo mulu'),
-        ),
-      )
+      home: const MyHome(),
     );
   }
 
@@ -39,6 +32,23 @@ class MyHome extends StatelessWidget {
         ),
         body: const Center(
           child: Text('Apa aja'),
+        ),
+      );
+    }
+  }
+
+// HOME1
+  class MyHome1 extends StatelessWidget {
+    const MyHome1({super.key});
+  
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: const Text('JUDUL JUDULAN'),
+        ),
+        body: const Center(
+          child: Text('Apa aja DAHHH'),
         ),
       );
     }
