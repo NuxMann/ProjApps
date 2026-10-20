@@ -28,7 +28,9 @@ class MyHome extends StatelessWidget {
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text('Gatau Judul'),
+          leading: Icon(Icons.man_2_outlined),
+          backgroundColor: Colors.blue,
+          title: const Text('Ryverse'),
         ),
         body: const Center(
           child: Text('Apa aja'),
