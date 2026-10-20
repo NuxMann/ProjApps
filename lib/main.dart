@@ -12,6 +12,14 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       title: 'hello brook',
       debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Judul Halaman'),
+        ),
+        body: const Center(
+          child: Text('Halo mulu'),
+        ),
+      )
     );
   }
 }
