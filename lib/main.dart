@@ -39,9 +39,18 @@ class MyHome extends StatelessWidget {
           backgroundColor: Colors.blue,
           title: const Text('Ryverse'),
         ),
-        body: const Center(
-          child: Text('Apa aja'),
-        ),
+        body:Column(
+          children: [
+            Center(
+              child: Text('Hello World'),
+            ),
+            Center(
+              child: Text('Hello World'),
+            ),
+            Text('Hello World'),
+          
+          ],
+        )
       );
     }
   }
