@@ -90,7 +90,13 @@ class FahryWidget extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              // Navigasi ke Profil
+              // Navigasi ke ProfilePage
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProfilePage(),
+                ),
+              );
             },
             child: const Text(
               'Profil',
@@ -107,7 +113,61 @@ class FahryWidget extends StatelessWidget {
   }
 }
 
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        title: const Text('Halaman Profil'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            const CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.blue,
+              child: Icon(
+                Icons.person,
+                size: 50,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'Fahry Achmad Wibowo',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'NIM: 1124160069',
+              style: TextStyle(color: Colors.grey),
+            ),
+            const Divider(height: 32),
+            const ListTile(
+              leading: Icon(Icons.email),
+              title: Text('Email'),
+              subtitle: Text('fahry@verse.com'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.school),
+              title: Text('Program Studi'),
+              subtitle: Text('Teknik Informatika'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class MyWidget extends StatelessWidget {
   const new({super.key});
