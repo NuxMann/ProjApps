@@ -40,13 +40,48 @@ class FahryWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
+        foregroundColor: const Color.fromARGB(255, 55, 2, 2),
         title: const Text('Dashboard Mahasiswa'),
+        actions: [
+          TextButton(
+            onPressed: () {
+            },
+            child: const Text(
+              'Beranda',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+            },
+            child: const Text(
+              'Jadwal',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+            },
+            child: const Text(
+              'Nilai',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              // Navigasi ke Profil
+            },
+            child: const Text(
+              'Profil',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          const SizedBox(width: 8), // Memberikan sedikit jarak di paling kanan
+        ],
       ),
       body: const Center(
         child: Text('Fahry Achmad Wibowo'),
       ),
-      
     );
   }
 }
