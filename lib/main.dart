@@ -9,17 +9,43 @@ void main() {
 // FAHRY ACHMAD WIBOWO
 
 class FahryApp extends StatelessWidget {
-  const new({super.key});
+  const FahryApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aplikasi Mahasiswa',
       debugShowCheckedModeBanner: false,
-      // home: const MyHome1(),
+      home: const FahryWidget(),
+
+      // Tema
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
     );
 }
 }
+
+// Fahry Widget
+class FahryWidget extends StatelessWidget {
+  const FahryWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Dashboard Mahasiswa'),
+      ),
+      body: const Center(
+        child: Text('Fahry Achmad Wibowo'),
+      ),
+      
+    );
+  }
+}
+
+
 
 class MyWidget extends StatelessWidget {
   const new({super.key});
