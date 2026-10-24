@@ -24,7 +24,16 @@ class FahryApp extends StatelessWidget {
           seedColor: Colors.blue,
         ),
         useMaterial3: true,
+        // DARK MODE
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.dark,
+        ),
+      ),
+
       home: const FahryWidget(),
 
     );
@@ -40,8 +49,20 @@ class FahryWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        foregroundColor: const Color.fromARGB(255, 55, 2, 2),
-        title: const Text('Dashboard Mahasiswa'),
+        title: const Text.rich(
+          TextSpan(
+            children: [
+              TextSpan(
+                text: 'Dashboard ',
+                style: TextStyle(color: Colors.red), 
+              ),
+              TextSpan(
+                text: 'Mahasiswa',
+                style: TextStyle(color: Colors.white), 
+              ),
+            ],
+          ),
+        ),
         actions: [
           TextButton(
             onPressed: () {
