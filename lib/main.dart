@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyWidget());
+  runApp(FahryApp());
+}
+
+// Tugas
+// NIM 1124160069
+// FAHRY ACHMAD WIBOWO
+
+class FahryApp extends StatelessWidget {
+  const new({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Aplikasi Mahasiswa',
+      debugShowCheckedModeBanner: false,
+      // home: const MyHome1(),
+    );
+}
 }
 
 class MyWidget extends StatelessWidget {
