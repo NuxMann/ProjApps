@@ -16,13 +16,17 @@ class FahryApp extends StatelessWidget {
     return MaterialApp(
       title: 'Aplikasi Mahasiswa',
       debugShowCheckedModeBanner: false,
-      home: const FahryWidget(),
+      
 
       // Tema
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+        ),
         useMaterial3: true,
       ),
+      home: const FahryWidget(),
+
     );
 }
 }
@@ -35,6 +39,8 @@ class FahryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
         title: const Text('Dashboard Mahasiswa'),
       ),
       body: const Center(
